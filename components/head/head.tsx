@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { NextPage } from "next";
-import { MouseEvent } from "react";
 import { modeType } from "../../interface/mode";
 
 interface props {
