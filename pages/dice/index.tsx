@@ -111,7 +111,6 @@ const Table = styled.table`
   border: 1px solid #202020;
   border-collapse: collapse;
   margin: 50px 0 30px 0;
-  max-width: 80vw;
 
   th,
   td {

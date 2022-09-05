@@ -94,6 +94,14 @@ const Table = styled.table`
     text-align: center;
     white-space: nowrap;
   }
+
+  @media (max-width: 550px) {
+    th,
+    td {
+      font-size: 3.63vw;
+      padding: 0.9vw 5.45vw;
+    }
+  }
 `;
 
 const ReThrow = styled.button`
@@ -125,6 +133,11 @@ const Canvas = styled.div`
   width: 500px;
   height: 500px;
   margin: 0;
+
+  @media (max-width: 900px) {
+    width: 70vw;
+    height: 70vw;
+  }
 `;
 
 export const getServerSideProps = (context: any) => {
