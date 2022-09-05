@@ -32,12 +32,11 @@ const DiceRes: NextPage<props> = ({
 
       if (ctx) {
         myLineChart = new Chart(ctx, {
-          type: "bar", //doughnut
+          type: "bar",
           data: {
             labels: ["1", "2", "3", "4", "5", "6"],
             datasets: [
               {
-                label: "확률",
                 data: [one, two, three, four, five, six],
                 backgroundColor: [
                   "#ffa8a8",

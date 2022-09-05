@@ -20,12 +20,11 @@ const CoinRes: NextPage<props> = ({ f, b }: props) => {
 
       if (ctx) {
         myLineChart = new Chart(ctx, {
-          type: "bar", //doughnut
+          type: "bar",
           data: {
             labels: ["앞면", "뒷면"],
             datasets: [
               {
-                label: "확률",
                 data: [f, b],
                 backgroundColor: ["#d3f9d8", "#dbe4ff"],
               },
