@@ -24,7 +24,7 @@ const DiceRes: NextPage<props> = ({
   const sum = one + two + three + four + five + six;
   const canvasEl = useRef<HTMLCanvasElement>(null);
   const router = useRouter();
-  let myLineChart: Chart<"pie", number[], string>;
+  let myLineChart: Chart<"bar", number[], string>;
 
   const createBarChart = () => {
     if (canvasEl && canvasEl.current) {
@@ -32,7 +32,7 @@ const DiceRes: NextPage<props> = ({
 
       if (ctx) {
         myLineChart = new Chart(ctx, {
-          type: "pie", //doughnut
+          type: "bar", //doughnut
           data: {
             labels: ["1", "2", "3", "4", "5", "6"],
             datasets: [
@@ -53,7 +53,7 @@ const DiceRes: NextPage<props> = ({
           options: {
             plugins: {
               legend: {
-                display: true,
+                display: false,
               },
             },
           },
@@ -148,7 +148,7 @@ const Page = styled.div`
 
 const Canvas = styled.div`
   position: relative;
-  width: 500px;
+  width: 900px;
 `;
 
 export const getServerSideProps = (context: any) => {

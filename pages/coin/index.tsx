@@ -12,7 +12,7 @@ interface props {
 const CoinRes: NextPage<props> = ({ f, b }: props) => {
   const canvasEl = useRef<HTMLCanvasElement>(null);
   const router = useRouter();
-  let myLineChart: Chart<"pie", number[], string>;
+  let myLineChart: Chart<"bar", number[], string>;
 
   const createBarChart = () => {
     if (canvasEl && canvasEl.current) {
@@ -20,7 +20,7 @@ const CoinRes: NextPage<props> = ({ f, b }: props) => {
 
       if (ctx) {
         myLineChart = new Chart(ctx, {
-          type: "pie", //doughnut
+          type: "bar", //doughnut
           data: {
             labels: ["앞면", "뒷면"],
             datasets: [
@@ -32,9 +32,10 @@ const CoinRes: NextPage<props> = ({ f, b }: props) => {
             ],
           },
           options: {
+            maintainAspectRatio: false,
             plugins: {
               legend: {
-                display: true,
+                display: false,
               },
             },
           },
@@ -122,6 +123,7 @@ const Page = styled.div`
 const Canvas = styled.div`
   position: relative;
   width: 500px;
+  height: 500px;
   margin: 0;
 `;
 
