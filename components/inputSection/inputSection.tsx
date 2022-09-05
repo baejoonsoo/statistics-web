@@ -10,6 +10,7 @@ interface tempDataType {
   name: string;
   number: 2 | 6;
 }
+
 interface tempType {
   coin: tempDataType;
   dice: tempDataType;
@@ -103,11 +104,17 @@ const Send = styled.button`
   padding: 10px 20px;
   font-size: 18px;
   color: white;
+  white-space: nowrap;
   cursor: pointer;
   border-radius: 5px;
 
   &:active {
     transform: scale(0.98);
+  }
+
+  @media (max-width: 450px) {
+    font-size: 4vw;
+    padding: 2.2vw 4.4vw;
   }
 `;
 
@@ -125,10 +132,20 @@ const NumberInput = styled.input`
   border: none;
   border-bottom: 2px solid #444;
   padding-bottom: 5px;
+
+  @media (max-width: 450px) {
+    width: 55.5vw;
+    font-size: 6.2vw;
+    padding-bottom: 1.1vw;
+  }
 `;
 
 const Explanation = styled.p`
   font-size: 28px;
+
+  @media (max-width: 400px) {
+    font-size: 7vw;
+  }
 `;
 
 const Img = styled.div`
@@ -138,6 +155,11 @@ const Img = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+  @media (max-width: 450px) {
+    width: 75vw;
+    height: 75vw;
+  }
 `;
 
 const CoinContainer = styled.div`
