@@ -111,6 +111,7 @@ const Table = styled.table`
   border: 1px solid #202020;
   border-collapse: collapse;
   margin: 50px 0 30px 0;
+  max-width: 80vw;
 
   th,
   td {
@@ -119,6 +120,14 @@ const Table = styled.table`
     font-size: 20px;
     text-align: center;
     white-space: nowrap;
+  }
+
+  @media screen and (max-width: 1000px) {
+    th,
+    td {
+      font-size: 2vw;
+      padding: 0.5vw 3vw;
+    }
   }
 `;
 
@@ -149,6 +158,10 @@ const Page = styled.div`
 const Canvas = styled.div`
   position: relative;
   width: 900px;
+
+  @media (max-width: 1000px) {
+    width: 80vw;
+  }
 `;
 
 export const getServerSideProps = (context: any) => {
